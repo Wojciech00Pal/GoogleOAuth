@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .padding {
+    @apply sm:px-16 px-8 sm:py-24 py-12;
+  }
+}
+
+.tr {
+  border-color: rgb(20 42 105 / var(--tw-border-opacity));
+  border-width: 2px;
+  padding: 2px;
+}
+.tr:hover{
+  background-color: aliceblue;
+}
+.th {
+  border-color: rgb(20 42 105 / var(--tw-border-opacity));
+  border-width: 2px;
+  padding-left: 1.5rem/* 8px */;
+  padding-right: 1.5rem/* 8px */;
+}
+
+
+@layer components {
+    .max-container {
+        max-width: 1440px;
+        margin: 0 auto;
+        min-height: 100vh;
+      }
+
+    .footer {
+        /* position: relative; */
+        bottom: -10px;
+        /* width: 100%; */
+        height: 4rem;            /* Footer height */
+      }
+
+    .GoogleBtn{
+        
+        background-color: whitesmoke; /* Dark background color */
+        border-radius: 10%;   /* Rounded shape */
+        padding: 20px;       /* Add padding to the container for spacing */
+        text-align: center;   /*Center the Google Login button*/
+        box-shadow: 0px 20px 20px rgba(4, 25, 115, 0.3); /* Add a shadow for a cool effect */
+        color: blue;         /* Text color */
+        display: flex;
+        align-items: center;
+        
+    }
+    .Sm_GoogleBtn{
+        
+      background-color: whitesmoke; /* Dark background color */
+      border-radius: 10%;   /* Rounded shape */
+      padding: 10px;       /* Add padding to the container for spacing */
+      text-align: center;   /*Center the Google Login button*/
+      box-shadow: 0px 20px 20px rgba(4, 25, 115, 0.3); /* Add a shadow for a cool effect */
+      color: blue;         /* Text color */
+      display: flex;
+      align-items: center;
+      
+  }
+    .GoogleBtn:hover{
+        cursor: pointer;
+        width: fit-content;
+        background-color: rgb(215, 201, 201);
+    }
+    .Sm_GoogleBtn:hover{
+      cursor: pointer;
+      width: fit-content;
+      background-color: rgb(215, 201, 201);
+  }
+
+    .custom-button {
+        display: flex;
+        align-items: center; /* Align items vertically in the center */
+        gap: 0.5rem;
+      }
+      
+    .custom-button p {
+        margin: 0; /* Remove default margin on <p> elements */
+        padding: 0 10px; /* Add spacing between <p> elements */
+      }  
+}
