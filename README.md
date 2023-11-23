@@ -1,6 +1,6 @@
-# React + Vite
+# Logging by GOOGLE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Show data about you when you log in service.
 
 Currently, two official plugins are available:
 
