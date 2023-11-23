@@ -36,6 +36,11 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      - name: Check if gh-pages branch exists
+        run: |
+          git fetch origin gh-pages:gh-pages || echo "Branch does not exist"
+      - name: Create gh-pages branch if it doesn't exist
+        run: git checkout -b gh-pages
       - name: Download artifact
         uses: actions/download-artifact@v3
         with:
@@ -47,3 +52,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
+          target_branch: gh-pages
